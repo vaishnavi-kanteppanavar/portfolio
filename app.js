@@ -221,6 +221,14 @@ let activeProcessStage = "render";
 
 // 2. INITIALIZE PORTFOLIO ENGINE
 document.addEventListener("DOMContentLoaded", () => {
+  // Auto-Update and Clear Cache if Database Version Changes
+  const DATABASE_VERSION = "vk_v1.2";
+  const currentVer = localStorage.getItem("vk_portfolio_version");
+  if (currentVer !== DATABASE_VERSION) {
+    localStorage.removeItem("vk_portfolio_works");
+    localStorage.setItem("vk_portfolio_version", DATABASE_VERSION);
+    console.log("[VERSION ENGINE] Force-cleared local storage and updated to version " + DATABASE_VERSION);
+  }
   // Load data from localStorage or fallback
   const storedData = localStorage.getItem("vk_portfolio_works");
   if (storedData) {

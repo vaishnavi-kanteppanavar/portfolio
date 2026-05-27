@@ -719,6 +719,7 @@ body {
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
   transform-style: preserve-3d;
   perspective: 1000px;
+  transform: perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px); /* Pre-align on initial load to prevent subpixel layout shifts */
 }
 .project-card:hover {
   border-color: var(--accent-crimson);
