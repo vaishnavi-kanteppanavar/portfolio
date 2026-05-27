@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vaishnavi Kanteppanavar // BFA Fine Artist & Environment Artist</title>
+  <meta name="description" content="Personal game design, environment art, and fine arts archive of Vaishnavi Kanteppanavar, BFA artist currently creating realistic worlds at Rockstar Games.">
+  
+  <!-- Premium Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;700;800;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Outfit:wght@200;300;400;500;600;700&family=Italiana&display=swap" rel="stylesheet">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="index.css">
+  
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="loading-state">
+
+  <!-- Custom Cinematic Grid Overlay -->
+  <div class="tech-grid-overlay"></div>
+  <div class="crt-scanline"></div>
+  <div class="radial-ambient-glow"></div>
+  
+  <!-- Custom Liquid Cursor -->
+  <div class="custom-cursor-dot" id="customCursorDot"></div>
+  <div class="custom-cursor-outline" id="customCursorOutline"></div>
+
+  <!-- STICKY GLASSMORPHIC HEADER -->
+  <header class="main-header glass-panel">
+    <div class="header-container">
+      <div class="logo-area">
+        <span class="logo-accent">V A I S H N A V I</span>
+        <h1 class="logo-title">KANTEPPANAVAR</h1>
+        <span class="logo-sub">// FINE ART & GAME DEV</span>
+      </div>
+      
+      <nav class="nav-links">
+        <a href="#hero" class="nav-link active">I. OVERVIEW</a>
+        <a href="#archive" class="nav-link">II. GALLERY</a>
+        <a href="#timeline" class="nav-link">III. TIMELINE</a>
+        <a href="#contact" class="nav-link">IV. CORRESPONDENCE</a>
+      </nav>
+
+      <div class="action-area">
+        <a href="https://www.linkedin.com/in/vaishnavi-kanteppanavar-676b28270/" target="_blank" class="nav-linkedin-link" title="LinkedIn Profile">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle;">
+            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+          </svg>
+        </a>
+        <button id="adminToggleBtn" class="admin-btn glass-btn" onclick="toggleAdminPanel()">
+          <i data-lucide="sliders"></i>
+          <span>[EDIT_MODE]</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN SCROLLABLE CONTAINER -->
+  <main class="content-wrapper">
+
+    <!-- HERO / LANDING SECTION (REDESIGNED: ASYMMETRIC SPLIT ART-BOOK COVER) -->
+    <section id="hero" class="hero-section">
+      <div class="art-book-cover">
+        
+        <!-- Left Side: Editorial Typography -->
+        <div class="cover-text-panel">
+          <div class="artist-badge">BFA SCHOLAR & TECHNICAL CONTENT ARTIST AT ROCKSTAR GAMES</div>
+          
+          <h2 class="cover-main-title">
+            <span class="first-name">Vaishnavi</span>
+            <span class="last-name">Kanteppanavar</span>
+          </h2>
+          
+          <div class="editorial-manifesto">
+            <p class="manifesto-italic">
+              "I translate the tactile soul of academic fine arts into high-fidelity real-time virtual environments."
+            </p>
+            <p class="manifesto-body">
+              Rooted in classical oil painting composition from my BFA foundations in Karnataka, my daily practice is a relentless challenge of spatial creation. Currently working directly on the biggest game title ever made, <strong>GTA 6</strong>, at <strong>Rockstar Games</strong>, I merge academic realism with next-generation content art.
+            </p>
+          </div>
+
+          <div class="curator-stats glass-panel">
+            <div class="curator-stat">
+              <span class="stat-num">GTA VI</span>
+              <span class="stat-desc">ACTIVE PRODUCTION</span>
+            </div>
+            <div class="curator-stat">
+              <span class="stat-num">BFA</span>
+              <span class="stat-desc">TOP SCHOLAR</span>
+            </div>
+            <div class="curator-stat">
+              <span class="stat-num">R*</span>
+              <span class="stat-desc">TECHNICAL CELL</span>
+            </div>
+          </div>
+
+          <div class="cover-cta-row">
+            <a href="#archive" class="btn primary-gradient-btn">[ENTER THE GALLERY]</a>
+            <a href="#contact" class="btn outline-glass-btn">[DISPATCH INQUIRY]</a>
+          </div>
+        </div>
+
+        <!-- Right Side: Cinematic Art Frame Viewport -->
+        <div class="cover-art-panel">
+          <div class="art-canvas-frame">
+            <div class="frame-telemetry">
+              <span>CANVAS SIZE: 1200 x 750</span>
+              <span>INDEX: SEC_001</span>
+            </div>
+            <div class="canvas-artwork-overlay">
+              <div class="overlay-bracket tl"></div>
+              <div class="overlay-bracket tr"></div>
+              <div class="overlay-bracket bl"></div>
+              <div class="overlay-bracket br"></div>
+              <span class="overlay-focus-text">STUDIO VIEWPORT // ACTIVE</span>
+            </div>
+            <div class="canvas-image-layer" id="heroCanvasImageLayer">
+              <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 800 1200">
+                <rect width="100%" height="100%" fill="#0a0305"/>
+                <circle cx="400" cy="600" r="300" fill="none" stroke="#3a080d" stroke-width="1.5"/>
+                <circle cx="400" cy="600" r="180" fill="none" stroke="#8b0000" stroke-width="1" stroke-dasharray="6,6"/>
+                <!-- Architectural wireframe sketch lines -->
+                <line x1="100" y1="200" x2="700" y2="200" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+                <line x1="100" y1="1000" x2="700" y2="1000" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+                <line x1="200" y1="100" x2="200" y2="1100" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+                <line x1="600" y1="100" x2="600" y2="1100" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+                <!-- Staggered pillars concept -->
+                <rect x="250" y="300" width="100" height="600" fill="none" stroke="#ff2e4b" stroke-width="0.75" opacity="0.45"/>
+                <rect x="450" y="300" width="100" height="600" fill="none" stroke="#00e5ff" stroke-width="0.75" opacity="0.25"/>
+                <text x="400" y="605" font-family="Cinzel" font-size="16" fill="#fff" text-anchor="middle" letter-spacing="4">THE DUALITY OF CREATION</text>
+                <text x="400" y="635" font-family="Cormorant Garamond" font-size="12" fill="#6b7280" text-anchor="middle" font-style="italic">Oil Paint Foundations & Wireframe Meshes</text>
+              </svg>
+            </div>
+            <div class="frame-footer-telemetry">
+              <span id="coordinatesText">COORD: 12.9716° N / 77.5946° E</span>
+              <span>CELL_ID: R*-ENVIRONMENTALIST</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ARCHIVE SECTION (WORKS GRID) -->
+    <section id="archive" class="archive-section">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <span class="section-tag">// SUB-DIRECTORY_01</span>
+          <h3 class="section-title">THE WORKS ARCHIVE</h3>
+        </div>
+        <div class="filter-wrapper glass-panel">
+          <button class="filter-btn active" onclick="filterProjects('all')">ALL</button>
+          <button class="filter-btn" onclick="filterProjects('game-art')">GAME ENVIRONMENTS</button>
+          <button class="filter-btn" onclick="filterProjects('fine-arts')">FINE ARTS & STUDIES</button>
+        </div>
+      </div>
+
+      <!-- DYNAMIC PROJECTS CONTAINER -->
+      <div id="projectsGrid" class="projects-grid">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </section>
+
+    <!-- PROCESS BREAKDOWN SECTION (THE BLUEPRINT EXPLORER) -->
+    <section id="process" class="process-explorer-section">
+      <div class="blueprint-bg-grid"></div>
+      
+      <div class="blueprint-panel glass-panel">
+        <div class="blueprint-header">
+          <div class="blueprint-title-block">
+            <span class="bp-alert">[TECHNICAL PROCESS CELL]</span>
+            <h4 class="bp-main-title" id="bpTitle">PROJECT BLUEPRINT EXPLORER</h4>
+            <span class="bp-subtitle" id="bpSubtitle">Select a project from the archive to inspect its structural evolution</span>
+          </div>
+          <div class="bp-coordinate-overlay">
+            <span>SEC_ID: <strong id="bpSecId">#000</strong></span>
+            <span>MEDIUM: <strong id="bpMedium">N/A</strong></span>
+          </div>
+        </div>
+
+        <div class="blueprint-content-layout">
+          <!-- Left Panel: Core Story & Rationale -->
+          <div class="bp-left-column">
+            <div class="bp-story-card">
+              <div class="bp-card-hdr">
+                <i data-lucide="book-open"></i>
+                <h5>A. THE ARTISTIC STATEMENT / STORY</h5>
+              </div>
+              <div class="bp-card-body" id="bpStoryText">
+                <p class="muted-p">
+                  Every environment I construct is built around a narrative core. Click on any archive card above to inject the project telemetry data here. Explore the underlying inspiration, the urban loneliness, forgotten interiors, or gritty realism that drives the visual design.
+                </p>
+              </div>
+            </div>
+
+            <div class="bp-process-notes">
+              <div class="bp-card-hdr">
+                <i data-lucide="info"></i>
+                <h5>B. MEDIUM & CREATIVE TELEMETRY</h5>
+              </div>
+              <div class="bp-card-body" id="bpProcessNotes">
+                <!-- Dynamically populated by app.js -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Panel: Dynamic Process Carousel (THE CORE OF UCA ADMISSIONS) -->
+          <div class="bp-right-column" id="bpViewportContainer">
+            <!-- Dynamically populated by app.js to support 1 or 2 columns -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TIMELINE / THE GRIND SECTION -->
+    <section id="timeline" class="timeline-section">
+      <div class="section-header">
+        <span class="section-tag">III. THE DISCIPLINE & CHRONOLOGY</span>
+        <h3 class="section-title">THE ARTISTIC TIMELINE</h3>
+        <p class="section-intro">
+          I treat environment art as a relentless daily discipline. Fusing BFA academic honours with next-generation real-time content art, my journey is built on continuous creative self-challenge.
+        </p>
+      </div>
+
+      <div class="timeline-container">
+        <div class="timeline-line"></div>
+
+        <div class="timeline-item left-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card glass-panel">
+            <span class="tl-date">PRESENT [2026]</span>
+             <h4>Technical Content Artist at Rockstar Games</h4>
+             <p>
+               Working directly on **GTA 6**, the biggest and most highly anticipated game title ever made in history. Responsible for engineering modular world assets, advanced shader networks, and next-generation technical art workflows, collaborating with world-class developers within the strict bounds of the RAGE production pipeline.
+             </p>
+          </div>
+        </div>
+
+        <div class="timeline-item right-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card glass-panel">
+            <span class="tl-date">THE CORE ETHOS</span>
+            <h4>Relentless Painting Portfolio Grind</h4>
+            <p>
+              During my intense portfolio-building years, I devoted endless hours every single day to creating personal artworks and digital painting compositions when building up my portfolio. Sleeping only a few hours a night, this self-imposed intense grind of creating art and conquering every creative challenge possible shaped my discipline, proving that no artistic hurdle is too large.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item left-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card glass-panel">
+            <span class="tl-date">ACADEMIC FOUNDATION</span>
+            <h4>BFA Top Scholar (Karnataka Premier University)</h4>
+            <p>
+              Graduated as the absolute **batch top scholar** with a Bachelor of Fine Arts (BFA) degree from a leading Fine Arts University of Karnataka. Strongly praised by senior academic mentors for classical oil painting rendering, physical clay sculpture, and architectural perspective composition—academic roots that still guide the weight, light, and composition of my 3D environments.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ARTIST'S STUDIO GUESTBOOK (CONTACT SECTION) -->
+    <section id="contact" class="contact-section">
+      <div class="contact-container glass-panel">
+        <div class="contact-details">
+          <div class="contact-badge">[ STUDIO INQUIRIES & GUESTBOOK ]</div>
+          <h3 class="contact-title">Leave a Note in the Guestbook</h3>
+          <p class="contact-text">
+            If you represent a university admissions board, an art gallery curator, or a development studio cell interested in my environment art, please leave a note in my guestbook or send a direct inquiry.
+          </p>
+
+          <div class="info-blocks">
+            <div class="info-block">
+              <span class="info-lbl">// ACADEMIC & PHYSICAL BASE</span>
+              <span class="info-val">Karnataka, India</span>
+            </div>
+            <div class="info-block">
+              <span class="info-lbl">// DIRECT CORRESPONDENCE EMAIL</span>
+              <span class="info-val"><a href="mailto:kanteppanavarvaishnavi@gmail.com" class="info-link">kanteppanavarvaishnavi@gmail.com</a></span>
+            </div>
+            <div class="info-block">
+              <span class="info-lbl">// LINKEDIN PROFESSIONAL LEDGER</span>
+              <span class="info-val"><a href="https://www.linkedin.com/in/vaishnavi-kanteppanavar-676b28270/" target="_blank" class="info-link">Vaishnavi Kanteppanavar</a></span>
+            </div>
+            <div class="info-block">
+              <span class="info-lbl">// CURRENT SHIELD UNIT</span>
+              <span class="info-val">Technical Content Artist at Rockstar Games</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lined Guestbook Ledger Form -->
+        <form id="contactForm" class="contact-form" onsubmit="handleContactSubmit(event)">
+          <div class="form-grid">
+            <div class="input-wrap">
+              <input type="text" id="contactName" required placeholder=" ">
+              <label for="contactName">YOUR IDENTITY (YOUR NAME)</label>
+            </div>
+            <div class="input-wrap">
+              <input type="email" id="contactEmail" required placeholder=" ">
+              <label for="contactEmail">YOUR CHANNEL (YOUR EMAIL)</label>
+            </div>
+            <div class="input-wrap full-width">
+              <input type="text" id="contactSubject" required placeholder=" ">
+              <label for="contactSubject">THE SUBJECT (OBJECTIVE)</label>
+            </div>
+            <div class="input-wrap full-width">
+              <textarea id="contactMessage" required placeholder=" " rows="5"></textarea>
+              <label for="contactMessage">YOUR INQUIRY / GUESTBOOK MESSAGE</label>
+            </div>
+          </div>
+
+          <button type="submit" class="submit-btn primary-gradient-btn">
+            <span>[SEND MESSAGE TO MY STUDIO]</span>
+            <div class="submit-glow"></div>
+          </button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- LIVE PORTFOLIO ADMIN DASHBOARD DRAWER (THE SYSTEM EDITOR) -->
+  <div id="adminPanelDrawer" class="admin-panel-drawer glass-panel">
+    <div class="drawer-header">
+      <div class="drawer-title-group">
+        <i data-lucide="database"></i>
+        <h4>SYSTEM CONFIG DASHBOARD</h4>
+        <span class="drawer-subtitle">// LIVE PORTFOLIO EDITOR NODE</span>
+      </div>
+      <button class="close-drawer-btn" onclick="toggleAdminPanel()">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+
+    <div class="drawer-scroll-container">
+      
+      <!-- INSTRUCTION ALERTS -->
+      <div class="admin-alert glass-panel">
+        <div class="alert-hdr">
+          <i data-lucide="info"></i>
+          <span>ADMINISTRATOR TELEMETRY</span>
+        </div>
+        <p>
+          You are editing the live content database of <strong>Vaishnavi K.</strong>. Any updates added here persist immediately to the web view using browser memory (`localStorage`). You can also export the modified config below.
+        </p>
+      </div>
+
+      <!-- ADD / EDIT FORM -->
+      <div class="drawer-section">
+        <h5 class="section-header-title">// ADD OR MODIFY AN ARTWORK</h5>
+        <form id="projectEditorForm" onsubmit="saveProject(event)">
+          <input type="hidden" id="editProjectId" value="">
+          
+          <div class="editor-input-group">
+            <label for="editTitle">ARTWORK TITLE</label>
+            <input type="text" id="editTitle" required placeholder="e.g. Abandoned Delhi Metro Station">
+          </div>
+
+          <div class="editor-input-row">
+            <div class="editor-input-group">
+              <label for="editCategory">CATEGORY</label>
+              <select id="editCategory" required>
+                <option value="game-art">Game Environment</option>
+                <option value="fine-arts">Fine Arts & Study</option>
+              </select>
+            </div>
+            <div class="editor-input-group">
+              <label for="editThumbnailFocus">THUMBNAIL FOCUS</label>
+              <select id="editThumbnailFocus" required>
+                <option value="center">Center (Default)</option>
+                <option value="top">Top Focus</option>
+                <option value="bottom">Bottom Focus</option>
+                <option value="left">Left Focus</option>
+                <option value="right">Right Focus</option>
+              </select>
+            </div>
+          </div>
+          <div class="editor-input-row">
+            <div class="editor-input-group" style="width: 100%;">
+              <label for="editMedium">ARTWORK MEDIUM / TYPE</label>
+              <input type="text" id="editMedium" required placeholder="e.g., Oil on Canvas physical study, Real-Time 3D Render, etc.">
+            </div>
+          </div>
+
+          <div class="editor-input-group">
+            <label for="editSubtitle">SUBTITLE / BRIEF SUMMARY</label>
+            <input type="text" id="editSubtitle" required placeholder="e.g. High-fidelity realistic scene depicting decaying public spaces in cyberpunk India.">
+          </div>
+
+          <div class="editor-input-group">
+            <label for="editStory">A. THE STATEMENT / INSPIRATION STORY</label>
+            <textarea id="editStory" rows="4" required placeholder="Describe what inspired this work. E.g., abandoned Delhi metro aesthetic, urban loneliness, gaming nostalgia..."></textarea>
+          </div>
+
+          <!-- IMAGE UPLOADS WITH BASE64 HANDLER -->
+          <div class="uploader-header-title">// PRIMARY ARTWORK IMAGE</div>
+          <p class="uploader-p">Upload the primary high-fidelity render or painting image. If left empty, a placeholder technical SVG is generated automatically.</p>
+
+          <div class="upload-grid" style="grid-template-columns: 1fr; margin-bottom: 15px;">
+            <div class="upload-field" style="margin-bottom: 0;">
+              <span class="field-lbl">ARTWORK IMAGE SOURCE</span>
+              <label class="custom-file-upload" style="width: 100%; display: flex; align-items: center; justify-content: center; height: 50px;">
+                <input type="file" id="fileImage" accept="image/*" onchange="processImageFile(this)">
+                <span class="file-btn-text" id="btnLblImage">Select Artwork Image File</span>
+              </label>
+              <input type="hidden" id="dataImage" value="">
+            </div>
+          </div>
+
+          <div class="uploader-header-title">// SECONDARY ARTWORK IMAGE (OPTIONAL - FOR 2 SHOTS)</div>
+          <p class="uploader-p">Upload an optional secondary render shot or details page (useful for Game Environments to show two columns side-by-side).</p>
+
+          <div class="upload-grid" style="grid-template-columns: 1fr; margin-bottom: 20px;">
+            <div class="upload-field" style="margin-bottom: 0;">
+              <span class="field-lbl">SECONDARY IMAGE SOURCE</span>
+              <label class="custom-file-upload" style="width: 100%; display: flex; align-items: center; justify-content: center; height: 50px;">
+                <input type="file" id="fileImage2" accept="image/*" onchange="processImage2File(this)">
+                <span class="file-btn-text" id="btnLblImage2">Select Secondary Image File</span>
+              </label>
+              <input type="hidden" id="dataImage2" value="">
+            </div>
+          </div>
+
+          <div class="editor-actions">
+            <button type="submit" class="editor-save-btn primary-gradient-btn">[COMMIT CHANGES]</button>
+            <button type="button" class="editor-clear-btn outline-glass-btn" onclick="clearEditorForm()">[RESET FORM]</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- EXISTING ARCHIVES MANAGEMENT LIST -->
+      <div class="drawer-section">
+        <h5 class="section-header-title">// MANAGE ARCHIVE INDEX</h5>
+        <div id="adminProjectList" class="admin-project-list">
+          <!-- Populated dynamically by app.js -->
+        </div>
+      </div>
+
+      <!-- PORTFOLIO CONFIG EXPORT / IMPORT -->
+      <div class="drawer-section">
+        <h5 class="section-header-title">// BACKUP & EXPORT ENVIRONMENT CONFIG</h5>
+        <p class="uploader-p">Export your current layout config to JSON to backup or hardcode it in app.js.</p>
+        <textarea id="configTextarea" class="config-textarea" readonly onclick="this.select()"></textarea>
+        <div class="config-actions">
+          <button class="config-btn primary-gradient-btn" onclick="generateBackupConfig()">[GENERATE CONFIG]</button>
+          <button class="config-btn outline-glass-btn" onclick="downloadConfigJSON()">[DOWNLOAD JSON]</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- LIGHTBOX MODAL FOR FULL-SCREEN VIEWING -->
+  <div id="lightboxModal" class="lightbox-modal" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+    <div class="lightbox-content" onclick="event.stopPropagation()">
+      <img id="lightboxImage" src="" alt="Enlarged Artwork">
+      <div id="lightboxCaption" class="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <!-- CORE SCRIPTS -->
+  <script src="app.js"></script>
+</body>
+</html>
