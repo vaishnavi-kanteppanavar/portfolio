@@ -447,9 +447,12 @@
         <h5 class="section-header-title">// BACKUP & EXPORT ENVIRONMENT CONFIG</h5>
         <p class="uploader-p">Export your current layout config to JSON to backup or hardcode it in app.js.</p>
         <textarea id="configTextarea" class="config-textarea" readonly onclick="this.select()"></textarea>
-        <div class="config-actions">
-          <button class="config-btn primary-gradient-btn" onclick="generateBackupConfig()">[GENERATE CONFIG]</button>
-          <button class="config-btn outline-glass-btn" onclick="downloadConfigJSON()">[DOWNLOAD JSON]</button>
+        <div class="config-actions" style="display: grid; grid-template-columns: 1fr; gap: 10px; margin-top: 10px;">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+            <button class="config-btn primary-gradient-btn" onclick="generateBackupConfig()">[GENERATE CONFIG]</button>
+            <button class="config-btn outline-glass-btn" onclick="downloadConfigJSON()">[DOWNLOAD JSON]</button>
+          </div>
+          <button class="config-btn outline-glass-btn" style="border-color: var(--accent-crimson); color: #ff3366; width: 100%;" onclick="resetDatabaseToHardcoded()">[RESET TO HARDCODED DEFAULTS]</button>
         </div>
       </div>
 
