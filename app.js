@@ -300,7 +300,10 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Setup Custom Cursor
-  initCustomCursor();
+  const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+  if (!isTouchDevice) {
+    initCustomCursor();
+  }
 
   // Load Works Grid
   renderPortfolioGrid();
@@ -316,7 +319,9 @@ document.addEventListener("DOMContentLoaded", () => {
   initScrollAnimations();
 
   // Setup Dynamic spotlight and 3D Framer tilt interaction
-  initCardTiltInteraction();
+  if (!isTouchDevice) {
+    initCardTiltInteraction();
+  }
 
   // Lucide Icons Render
   lucide.createIcons();
@@ -909,12 +914,24 @@ function initScrollAnimations() {
     let current = "";
     
     sections.forEach(section => {
-      const sectionTop = section.offsetTop;
-      const sectionHeight = section.clientHeight;
-      if (pageYOffset >= sectionTop - 150) {
+      const rect = section.getBoundingClientRect();
+      // If the section top is above 200px from viewport top, mark it as active candidate
+      if (rect.top <= 200) {
         current = section.getAttribute("id");
       }
     });
+
+    // Map process explorer back to archive (Gallery) since it's a detail node of the gallery
+    if (current === "process") {
+      current = "archive";
+    }
+
+    // Auto-highlight CORRESPONDENCE (contact) at the bottom bounds of the page
+    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+    const isAtBottom = window.scrollY >= (maxScroll - 80);
+    if (isAtBottom) {
+      current = "contact";
+    }
 
     navLinks.forEach(link => {
       link.classList.remove("active");

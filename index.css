@@ -701,7 +701,7 @@ body {
 /* Stagger effect: Shifts every second card vertically to break technical monotony */
 @media (min-width: 768px) {
   .project-card:nth-child(even) {
-    transform: translateY(40px);
+    transform: perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px); /* Align perfectly horizontally with matching rendering contexts */
   }
 }
 
@@ -1887,8 +1887,18 @@ body {
   }
 
   .canvas-image-layer {
+    width: 100%;
+    aspect-ratio: 4/3;
     height: auto !important;
-    min-height: 280px;
+    min-height: unset;
+  }
+  
+  .archive-section, .process-explorer-section, .timeline-section, .contact-section {
+    margin: 60px auto !important;
+  }
+  
+  .section-header {
+    margin-bottom: 30px !important;
   }
   
   .editorial-manifesto {
@@ -1984,6 +1994,25 @@ body {
   .admin-panel-drawer {
     width: 100%;
     right: -100%;
+  }
+
+  /* High-Performance Mobile flat card overrides */
+  .project-card {
+    transform: none !important;
+    transform-style: flat !important;
+    perspective: none !important;
+    will-change: auto !important;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4) !important;
+  }
+  
+  .project-card:hover {
+    transform: none !important;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4) !important;
+    border-color: var(--glass-border) !important;
+  }
+
+  .project-card::before, .project-card:hover::before {
+    display: none !important;
   }
 }
 
