@@ -1152,19 +1152,3 @@ function optimizeExistingDatabase() {
   }
 }
 
-// 14. RESET ENGINE LOCALSTORAGE OVERRIDE
-function resetDatabaseToHardcoded() {
-  if (confirm("Warning: This will clear your browser's local cache and reload the hardcoded default projects from app.js. Are you sure you want to proceed?")) {
-    localStorage.removeItem("vk_portfolio_works");
-    location.reload();
-  }
-}
-
-
-// 14. RESET ENGINE LOCALSTORAGE OVERRIDE
-function resetDatabaseToHardcoded() {
-  if (confirm('Warning: This will clear your browser''s local cache and reload the hardcoded default projects from app.js. Are you sure you want to proceed?')) {
-    localStorage.removeItem('vk_portfolio_works');
-    location.reload();
-  }
-}
