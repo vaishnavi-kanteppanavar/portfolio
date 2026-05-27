@@ -1847,14 +1847,16 @@ body {
   }
   
   .hero-section {
-    padding: 0 20px;
-    margin-top: 100px;
+    padding: 0 15px;
+    margin-top: 80px;
   }
   
   .art-book-cover {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 20px;
     text-align: center;
+    min-height: auto;
+    padding-bottom: 30px;
   }
   
   .cover-text-panel {
@@ -1862,8 +1864,8 @@ body {
   }
 
   .cover-main-title {
-    font-size: clamp(34px, 10vw, 44px);
-    margin-bottom: 25px;
+    font-size: clamp(32px, 9vw, 40px);
+    margin-bottom: 20px;
   }
 
   .cover-art-panel {
@@ -1871,15 +1873,21 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 15px;
   }
 
   .art-canvas-frame {
     width: 100%;
-    max-width: 380px;
+    max-width: 330px;
     margin: 0 auto;
-    padding: 16px;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9);
+    padding: 12px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.95);
+    gap: 10px;
+  }
+
+  .canvas-image-layer {
+    height: auto !important;
+    min-height: 280px;
   }
   
   .editorial-manifesto {
